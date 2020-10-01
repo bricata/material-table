@@ -6,7 +6,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import DoubleScrollbar from "react-double-scrollbar";
 import * as React from "react";
 import { MTablePagination, MTableSteppedPagination } from "./components";
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import { Droppable } from "react-beautiful-dnd";
 import DataManager from "./utils/data-manager";
 import { debounce } from "debounce";
 import equal from "fast-deep-equal";
@@ -958,7 +958,7 @@ export default class MaterialTable extends React.Component {
     const props = this.getProps();
 
     return (
-      <DragDropContext
+      <React.Fragment>
         onDragEnd={this.onDragEnd}
         nonce={props.options.cspNonce}
       >
@@ -1167,7 +1167,7 @@ export default class MaterialTable extends React.Component {
               </div>
             )}
         </props.components.Container>
-      </DragDropContext>
+      <React.Fragment>
     );
   }
 }
