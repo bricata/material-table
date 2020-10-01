@@ -959,9 +959,6 @@ export default class MaterialTable extends React.Component {
 
     return (
       <React.Fragment>
-        onDragEnd={this.onDragEnd}
-        nonce={props.options.cspNonce}
-      >
         <props.components.Container
           style={{ position: "relative", ...props.style }}
         >
@@ -1167,7 +1164,7 @@ export default class MaterialTable extends React.Component {
               </div>
             )}
         </props.components.Container>
-      <React.Fragment>
+      </React.Fragment>
     );
   }
 }
