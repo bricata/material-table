@@ -74,11 +74,11 @@ export default class DataManager {
         width:
           typeof columnDef.width === "number"
             ? columnDef.width + "px"
-            : columnDef.width,
+            : columnDef.width || "25px",
         initialWidth:
           typeof columnDef.width === "number"
             ? columnDef.width + "px"
-            : columnDef.width,
+            : columnDef.width || "25px",
         additionalWidth: 0,
         ...columnDef.tableData,
         id: index,
