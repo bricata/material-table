@@ -600,7 +600,7 @@ export default class MaterialTable extends React.Component {
               query,
             },
             () => {
-              callback && callback();
+              callback && callback(result);
             }
           );
         })
