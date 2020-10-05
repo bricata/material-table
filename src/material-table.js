@@ -326,6 +326,13 @@ export default class MaterialTable extends React.Component {
     );
   };
 
+  onAddRemoveColumn = (column, add) => {
+    this.dataManager.addRemoveColumn(column, add);
+    this.setState(this.dataManager.getRenderState(), () => {
+      this.props.onAddRemoveColumn && this.props.onAddRemoveColumn(column, add);
+    });
+  };
+
   onChangeColumnHidden = (column, hidden) => {
     this.dataManager.changeColumnHidden(column, hidden);
     this.setState(this.dataManager.getRenderState(), () => {
@@ -1002,6 +1009,7 @@ export default class MaterialTable extends React.Component {
               onSearchChanged={this.onSearchChangeDebounce}
               dataManager={this.dataManager}
               onColumnsChanged={this.onChangeColumnHidden}
+              onAddRemoveColumn={this.onAddRemoveColumn}
               localization={{
                 ...MaterialTable.defaultProps.localization.toolbar,
                 ...this.props.localization.toolbar,

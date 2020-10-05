@@ -74,11 +74,11 @@ export default class DataManager {
         width:
           typeof columnDef.width === "number"
             ? columnDef.width + "px"
-            : columnDef.width || "25px",
+            : columnDef.width,
         initialWidth:
           typeof columnDef.width === "number"
             ? columnDef.width + "px"
-            : columnDef.width || "25px",
+            : columnDef.width,
         additionalWidth: 0,
         ...columnDef.tableData,
         id: index,
@@ -269,6 +269,11 @@ export default class DataManager {
   changeColumnHidden(column, hidden) {
     column.hidden = hidden;
     column.hiddenByColumnsButton = hidden;
+  }
+
+  addRemoveColumn(column, add) {
+    column.hidden = !add;
+    column.hiddenByColumnsButton = false;
   }
 
   changeTreeExpand(path) {
