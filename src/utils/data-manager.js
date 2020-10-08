@@ -275,10 +275,6 @@ export default class DataManager {
     column.hiddenByColumnsButton = add;
   }
 
-  onDataChanged() {
-    this.sortedData = [...this.sortedData];
-  }
-
   changeTreeExpand(path) {
     const rowData = this.findDataByPath(this.sortedData, path);
     rowData.tableData.isTreeExpanded = !rowData.tableData.isTreeExpanded;
