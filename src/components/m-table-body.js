@@ -42,7 +42,7 @@ class MTableBody extends React.Component {
               this.props.options.paging &&
               this.props.options.emptyRowsWhenPaging
                 ? this.props.options.maxBodyHeight
-                  ? this.props.options.maxBodyHeight - 65
+                  ? this.props.options.maxBodyHeight - 68
                   : rowHeight * this.props.pageSize
                 : rowHeight,
           }}
