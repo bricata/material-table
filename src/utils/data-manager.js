@@ -272,7 +272,7 @@ export default class DataManager {
 
   addRemoveColumn(column, add) {
     column.hidden = !add;
-    column.hiddenByColumnsButton = !add;
+    column.hiddenByColumnsButton = add;
   }
 
   changeTreeExpand(path) {

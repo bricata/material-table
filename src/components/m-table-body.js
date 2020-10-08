@@ -39,11 +39,11 @@ class MTableBody extends React.Component {
         <TableRow
           style={{
             height:
-              rowHeight *
-              (this.props.options.paging &&
+              this.props.options.paging &&
               this.props.options.emptyRowsWhenPaging
-                ? this.props.pageSize
-                : 1),
+                ? this.props.options.maxBodyHeight ||
+                  rowHeight * this.props.pageSize
+                : rowHeight,
           }}
           key={"empty-" + 0}
         >
