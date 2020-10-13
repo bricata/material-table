@@ -7,4 +7,5 @@ Changes made:
 1. Changed behavior of hiddenByColumnsButton - now it's used to set visibility in the columns selector regardless of column 'hidden' state. When you add/remove columns it's reset to true/false respectively.
 1. Added callback for query changed
 1. Fixed emptyRowsWhenPaging so it uses maxBodyHeight to fill in empty space
+1. Added getData to access current table data
 1. Bug fix - table was breaking when showing columns that were initially hidden https://github.com/mbrn/material-table/issues/2414

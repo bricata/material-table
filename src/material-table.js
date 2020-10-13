@@ -316,6 +316,8 @@ export default class MaterialTable extends React.Component {
 
   isRemoteData = (props) => !Array.isArray((props || this.props).data);
 
+  getData = () => this.props.data;
+
   isOutsidePageNumbers = (props) =>
     props.page !== undefined && props.totalCount !== undefined;
 
