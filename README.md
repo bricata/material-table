@@ -1,4 +1,4 @@
-This is a fork of https://github.com/bricata/material-table
+This is a fork of https://github.com/mbrn/material-table
 
 Changes made:
 
